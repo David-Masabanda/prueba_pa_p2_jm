@@ -10,7 +10,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 import com.uce.edu.demo.matriculacion.modelo.Propietario;
 import com.uce.edu.demo.matriculacion.modelo.Vehiculo;
-import com.uce.edu.demo.matriculacion.service.IMatriculaService;
+import com.uce.edu.demo.matriculacion.service.IMatriculaGestorService;
 import com.uce.edu.demo.matriculacion.service.IPropietarioService;
 import com.uce.edu.demo.matriculacion.service.IVehiculoService;
 
@@ -18,7 +18,7 @@ import com.uce.edu.demo.matriculacion.service.IVehiculoService;
 public class PruebaPaP2JmApplication implements CommandLineRunner{
 	
 	@Autowired
-	private IMatriculaService matriculaService;
+	private IMatriculaGestorService matriculaGestor;
 	@Autowired
 	private IPropietarioService propietarioService;
 	@Autowired
@@ -43,7 +43,7 @@ public class PruebaPaP2JmApplication implements CommandLineRunner{
 		System.out.println();
 		
 		System.out.println("Actualizo los datos del vehiculo");
-		v1.setPlaca("GKQ-0125");
+		v1.setPrecio(new BigDecimal(18500));
 		v1.setMarca("Nissan");
 		this.vehiculoService.actualizar(v1);
 		System.out.println();
@@ -57,7 +57,7 @@ public class PruebaPaP2JmApplication implements CommandLineRunner{
 		this.propietarioService.insertar(p1);
 		System.out.println();
 		
-		this.matriculaService.matriculacion("1719139800", "GKQ-0125");
+		this.matriculaGestor.matricular("1719139881", "EAA-0245");
 	}
 
 }

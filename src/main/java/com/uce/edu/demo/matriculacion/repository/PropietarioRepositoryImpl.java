@@ -15,12 +15,12 @@ public class PropietarioRepositoryImpl implements IPropietarioRepository{
 	}
 
 	@Override
-	public Propietario read(String nombre) {
-		System.out.println("Buscando propietario en la base de datos:"+ nombre);
+	public Propietario read(String cedula) {
+		System.out.println("Buscando propietario en la base de datos:"+ cedula);
 		Propietario propietario=new Propietario();
 		propietario.setNombre("David");
 		propietario.setApellido("Lopez");
-		propietario.setCedula("0123456700");
+		propietario.setCedula(cedula);
 		propietario.setFechaNaciemiento(LocalDateTime.of(1999, 2, 14, 8, 50, 2));
 		return propietario;
 	}
@@ -31,8 +31,8 @@ public class PropietarioRepositoryImpl implements IPropietarioRepository{
 	}
 
 	@Override
-	public void delete(String nombre) {
-		System.out.println("Eliminando el propietario de la base: "+ nombre);
+	public void delete(String cedula) {
+		System.out.println("Eliminando el propietario de la base: "+ cedula);
 	}
 
 }

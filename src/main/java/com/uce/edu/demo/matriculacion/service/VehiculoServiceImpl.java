@@ -1,9 +1,6 @@
 package com.uce.edu.demo.matriculacion.service;
 
-import java.math.BigDecimal;
-
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
 
 import com.uce.edu.demo.matriculacion.modelo.Vehiculo;

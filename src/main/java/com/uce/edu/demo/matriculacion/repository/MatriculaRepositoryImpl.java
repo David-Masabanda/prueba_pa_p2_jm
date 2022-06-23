@@ -12,20 +12,4 @@ public class MatriculaRepositoryImpl implements IMatriculaRepository{
 		System.out.println("Se ha creado una nueva matricula en la base: "+ m);
 	}
 
-	@Override
-	public Matricula read(String propietario) {
-		System.out.println("Buscando matricula en la base del propietario: "+ propietario);
-		return null;
-	}
-
-	@Override
-	public void update(Matricula m) {
-		System.out.println("Actualizando los datos de la matricula: "+ m);
-	}
-
-	@Override
-	public void delete(String propietario) {
-		System.out.println("Eliminando la matricula del propietario: "+ propietario);
-	}
-
 }

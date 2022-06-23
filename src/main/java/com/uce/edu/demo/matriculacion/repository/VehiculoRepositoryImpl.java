@@ -16,14 +16,12 @@ public class VehiculoRepositoryImpl implements IVehiculoRepository{
 
 	@Override
 	public Vehiculo read(String placa) {
-		//Para este caso los datos que retorna son alternos. 
-		//En la practica con una base de datos seran los originales de igual forma para el propietario
 		System.out.println("Buscando vehiculo en la base de placa:"+ placa);
 		Vehiculo vehiculo=new Vehiculo();
 		vehiculo.setPlaca(placa);
 		vehiculo.setMarca("Toyota");
 		vehiculo.setTipo("Liviano");
-		vehiculo.setPrecio(new BigDecimal(20500));
+		vehiculo.setPrecio(new BigDecimal(1200));
 		return vehiculo;
 	}
 

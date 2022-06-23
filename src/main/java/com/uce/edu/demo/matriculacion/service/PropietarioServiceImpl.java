@@ -18,8 +18,8 @@ public class PropietarioServiceImpl implements IPropietarioService{
 	}
 
 	@Override
-	public Propietario buscar(String nombre) {
-		return this.propietarioRepository.read(nombre);
+	public Propietario buscar(String cedula) {
+		return this.propietarioRepository.read(cedula);
 	}
 
 	@Override
@@ -28,8 +28,8 @@ public class PropietarioServiceImpl implements IPropietarioService{
 	}
 
 	@Override
-	public void eliminar(String nombre) {
-		this.propietarioRepository.delete(nombre);
+	public void eliminar(String cedula) {
+		this.propietarioRepository.delete(cedula);
 	}
 
 }

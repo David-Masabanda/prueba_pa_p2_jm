@@ -1,12 +1,9 @@
 package com.uce.edu.demo.matriculacion.service;
 
-import com.uce.edu.demo.matriculacion.modelo.Matricula;
+import java.math.BigDecimal;
 
 public interface IMatriculaService {
 	
-	public void matriculacion(String cedula, String placa);
+	public BigDecimal calcular(BigDecimal precio);
 	
-	public Matricula buscar(String propietario);
-	public void actualizar(Matricula m);
-	public void eliminar(String propietario);
 }
